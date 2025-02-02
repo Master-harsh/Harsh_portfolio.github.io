@@ -7,6 +7,9 @@ body {
   background-color: #000021;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
 }
 
 nav {
@@ -14,6 +17,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 90px;
+  width: 100%;
   background-color: #7208d4;
 }
 
@@ -32,6 +36,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-size: medium;
+  font-weight: 900;
   color: #adff2f;
 }
 
@@ -43,6 +48,48 @@ nav ul li a:hover {
   padding: 3px;
 }
 
+#side-div,
+#menu-icon {
+  display: none;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #00002100;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px #0000001a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.side-bar li {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  margin: 20px auto 20px;
+  border-radius: 5px;
+  align-content: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.side-bar li:hover {
+  background-color: #7208d4;
+}
+
+.active {
+  font-weight: 900;
+  color: #adff2f;
+}
+
 #element {
   color: #adff2f;
 }
@@ -52,7 +99,7 @@ nav ul li a:hover {
   background-color: #adff2f;
   color: #000021;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .left:hover {
@@ -65,16 +112,20 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 80px 0;
+  margin: 80px;
 }
 
 .firstSection > div {
-  width: 30%;
+  width: 40%;
 }
 
 .leftSection {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 30px 0;
+}
+
+.element {
+  font-size: 3rem;
 }
 
 .leftSection > p {
@@ -107,35 +158,19 @@ a {
   font-size: 20px;
 }
 
-.ContactBtn {
+.button {
   height: 50px;
   width: 300px;
-  margin-left: 15px;
+  margin-left: 5px;
   background-color: #acff2f00;
   color: #507367;
   border: 1px solid #adff2f;
   border-radius: 10px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 900;
 }
 
-.ContactBtn:hover {
-  background-color: #adff2f;
-  color: #000021;
-}
-
-.ResumeBtn {
-  height: 50px;
-  width: 300px;
-  background-color: #acff2f00;
-  color: #507367;
-  border: 1px solid #adff2f;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.ResumeBtn:hover {
+.button:hover {
   background-color: #adff2f;
   color: #000021;
 }
@@ -144,12 +179,11 @@ main hr {
   background-color: #9c97f1;
   height: 0.1rem;
   border: 0;
-  margin: 60px 84px;
-  margin-top: 10px;
+  margin: 60px;
 }
 
 .AboutSection {
-  margin: 85px;
+  margin: 80px;
 }
 
 .AboutNote {
@@ -182,46 +216,6 @@ main hr {
   justify-content: center;
 }
 
-#menu-icon a svg {
-  margin-top: 10px;
-}
-
-#side-div {
-  display: none;
-}
-
-.side-bar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 999;
-  background-color: #00002100;
-  backdrop-filter: blur(10px);
-  box-shadow: -10px 0 10px #0000001a;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.side-bar li {
-  width: 100%;
-  height: 50px;
-  padding: 10px;
-  margin: 20px auto 20px;
-  border-radius: 5px;
-  align-content: center;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 500;
-}
-
-.side-bar li:hover {
-  background-color: #7208d4;
-}
-
 .About-Container {
   display: flex;
   justify-content: space-between;
@@ -241,6 +235,7 @@ main hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .img-container {
@@ -264,6 +259,7 @@ main hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .text-data .job {
@@ -300,23 +296,24 @@ main hr {
   border-radius: 50%;
   margin: 0 8px;
   text-decoration: none;
+  background: #507367;
 }
 
-.media-icons .link:hover {
+.media-icons a:hover {
   background-color: #adff2f;
+  color: #000021;
 }
 
-.button .ContactButton {
+.btns .ContactButton {
   height: 50px;
   width: 300px;
-  margin-left: 15px;
   margin-top: 20px;
   background-color: #acff2f00;
   color: #507367;
   border: 1px solid #adff2f;
   border-radius: 10px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .ContactButton:hover {
@@ -360,7 +357,7 @@ main hr {
 }
 
 .skillSection {
-  margin: 85px;
+  margin: 80px;
 }
 
 .SkillHead {
@@ -427,8 +424,10 @@ main hr {
   align-items: center;
 }
 
+/* project section */
+
 .projectSection {
-  margin: 85px;
+  margin: 80px;
   height: auto;
 }
 
@@ -451,16 +450,19 @@ main hr {
   justify-content: center;
   align-items: center;
   margin: 20px;
-  padding: 10px;
+  padding: 25px;
+  width: auto;
+  height: auto;
 }
 
 .projectFirst {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   height: auto;
   width: 100%;
-  margin: 30px;
+  margin: 10px;
   box-shadow: 0 5px 10px #0000001a;
   background-color: #41373789;
   border-radius: 20px;
@@ -473,20 +475,8 @@ main hr {
   border-radius: 24px;
   padding: 25px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-.projright {
-  width: 90%;
-  height: 300px;
-  display: flex;
-  gap: 25px;
-  border-radius: 20px;
-  padding: 30px;
-  flex-direction: column;
-  margin-left: 50px;
-  cursor: pointer;
+  justify-content: center;
 }
 
 .proimg {
@@ -495,31 +485,60 @@ main hr {
   width: 400px;
   border-radius: 20px;
   margin-bottom: 10px;
-  margin-left: 30px;
+  /* margin-left: 30px; */
+}
+
+.projright {
+  width: 90%;
+  height: 300px;
+  gap: 25px;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.rightHead {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .technology {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  justify-content: start;
+  gap: 30px;
   font-size: 20px;
 }
 
-.technology > h4 {
+.technology > ul > li {
   background-color: #50736755;
   color: #adff2f;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
+  /* width: 100%; */
+  width: 120px;
+  list-style: none;
 }
 
-.projright > .btn {
+.technology > ul {
   display: flex;
-  justify-content: end;
-  gap: 30px;
+  list-style: none;
+  gap: 10px;
 }
+
+.rightHead > .Btns {
+  display: flex;
+  gap: 15px;
+  margin-left: 10px;
+}
+
+/* contact Section */
 
 .contactME {
-  margin: 85px;
+  margin: 80px;
 }
 
 .ContactHead > h1 {
@@ -568,7 +587,7 @@ main hr {
   gap: 20px;
 }
 
-#Name {
+.FormInputs {
   height: 50px;
   width: 365px;
   border: 0;
@@ -580,55 +599,7 @@ main hr {
   border-radius: 10px;
 }
 
-#Name:hover {
-  border: 1px solid #adff2f;
-}
-
-#Email {
-  height: 50px;
-  width: 365px;
-  border: 0;
-  outline: 0;
-  padding: 10px;
-  font-size: 22px;
-  background-color: #41373789;
-  color: #507367;
-  border-radius: 10px;
-}
-
-#Email:hover {
-  border: 1px solid #adff2f;
-}
-
-#Number {
-  height: 50px;
-  width: 365px;
-  border: 0;
-  outline: 0;
-  padding: 10px;
-  font-size: 22px;
-  background-color: #41373789;
-  color: #507367;
-  border-radius: 10px;
-}
-
-#Number:hover {
-  border: 1px solid #adff2f;
-}
-
-#Subject {
-  height: 50px;
-  width: 365px;
-  border: 0;
-  outline: 0;
-  padding: 10px;
-  font-size: 22px;
-  background-color: #41373789;
-  color: #507367;
-  border-radius: 10px;
-}
-
-#Subject:hover {
+.FormInputs:hover {
   border: 1px solid #adff2f;
 }
 
@@ -673,35 +644,295 @@ textarea:hover {
   color: #adff2f;
 }
 
-.Heading {
+.mainFooterdiv {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 30px;
+  justify-content: space-around;
 }
 
-.Heading .connect {
+.mainFooterdiv > div {
+  margin-top: 40px;
+}
+
+.firstClass p {
+  font-size: 20px;
   color: #000021;
 }
 
-.social-connection {
+.secondClass ul li {
+  list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  height: 100px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-.social-connection .link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+.secondClass li a {
+  color: #000021;
   font-size: 20px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  margin: 0 8px;
-  text-decoration: none;
+  font-weight: 500;
+}
+
+.secondClass li a:hover {
+  color: #adff2f;
+}
+
+.thirdClass ul li {
+  list-style: none;
+  margin-left: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.thirdClass li a {
+  color: #000021;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.foot > hr {
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    background-color: #000021;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+  }
+
+  .left {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .right {
+    display: none;
+  }
+
+  #menu-icon {
+    display: flex;
+  }
+
+  .leftSection {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .element {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .leftSection > p {
+    font-size: 15px;
+  }
+
+  #Resume-btn {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    font-weight: 200;
+    margin-left: 0;
+  }
+
+  .rightSection {
+    display: none;
+  }
+
+  /* Side bar */
+
+  .side-bar {
+    width: 100px;
+  }
+
+  .side-bar li {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin: 20px auto 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 100;
+  }
+
+  /* About section */
+
+  .AboutSection > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .About-Container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .AboutNote > h1,
+  p {
+    text-align: center;
+  }
+
+  .img-container {
+    height: auto;
+    width: auto;
+  }
+
+  .LeftAbout {
+    height: auto;
+    width: 100%;
+  }
+
+  .text-data {
+    text-align: center;
+  }
+
+  .text-data .name {
+    font-size: 40px;
+    font-weight: 500;
+    color: #adff2f;
+  }
+
+  .media-icons .link {
+    height: auto;
+    width: auto;
+    background: none;
+  }
+
+  .btns .ContactButton {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .RightAbout {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 50px;
+  }
+
+  /* skill section */
+
+  .MainSkillContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+  }
+
+  .MainSkillContainer > div {
+    width: 100%;
+    min-width: none;
+  }
+
+  .Skilldiv {
+    flex-direction: column;
+  }
+
+  /* project */
+  .projectFirst {
+    flex-direction: column;
+  }
+
+  .rightHead {
+    /* margin-left: 10px; */
+    margin-right: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .rightHead > .Btns {
+    margin-left: 25px;
+  }
+
+  .projleft {
+    margin-right: 10px;
+  }
+
+  .proimg {
+    height: 200px;
+    width: 200px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+  }
+
+  .projright {
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .technology {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .technology > ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-right: 20px;
+  }
+
+  /* Contact Form */
+
+  .FormContainer {
+    flex-direction: column;
+  }
+
+  .first {
+    flex-direction: column;
+  }
+
+  .second {
+    flex-direction: column;
+  }
+
+  textarea {
+    height: 100px;
+    width: 360px;
+  }
+
+  /* Footer section */
+
+  .mainFooterdiv {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #adff2f, 0 0 10px #adff2f;
+  }
+  50% {
+    box-shadow: 0 0 20px #adff2f, 0 0 40px #adff2f;
+  }
+  100% {
+    box-shadow: 0 0 5px #adff2f, 0 0 10px #adff2f;
+  }
+}
+
+.projectFirst:hover {
+  animation: glow 1.5s infinite alternate;
+}
+
+#Resume-btn {
+  animation: glow 1.5s infinite alternate;
+}
+
+.media-icons > a:hover {
+  animation: glow 1.5s infinite alternate;
 }
