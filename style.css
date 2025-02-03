@@ -12,6 +12,10 @@ body {
   width: 100%;
 }
 
+header {
+  width: 100%;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -192,16 +196,6 @@ main hr {
 }
 
 .AboutNote h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.AboutNote img {
-  width: 30px;
-  background-color: #adff2f;
-  border: 0;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -535,6 +529,11 @@ main hr {
   margin-left: 10px;
 }
 
+.Btns > button {
+  background: #80808031;
+  border-radius: 10px;
+}
+
 /* contact Section */
 
 .contactME {
@@ -688,6 +687,7 @@ textarea:hover {
 
 .thirdClass li a {
   color: #000021;
+  text-align: center;
   font-size: 20px;
   font-weight: 500;
 }
@@ -705,6 +705,10 @@ textarea:hover {
     width: 100%;
   }
 
+  .navbar {
+    width: 100%;
+  }
+
   .left {
     font-size: 1.2rem;
     text-align: center;
@@ -718,14 +722,25 @@ textarea:hover {
     display: flex;
   }
 
+  .firstSection {
+    margin: 0px;
+    width: 100%;
+  }
+
+  .firstSection > div {
+    width: 100%;
+  }
+
   .leftSection {
     width: 100%;
     font-size: 1rem;
+    text-align: center;
   }
 
   .element {
     font-size: 1.5rem;
     width: 100%;
+    text-align: center;
   }
 
   .leftSection > p {
@@ -737,7 +752,11 @@ textarea:hover {
     height: auto;
     padding: 10px;
     font-weight: 200;
-    margin-left: 0;
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
   }
 
   .rightSection {
@@ -760,7 +779,19 @@ textarea:hover {
     font-weight: 100;
   }
 
+  main hr {
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
   /* About section */
+
+  .AboutSection {
+    margin: 0px;
+    width: 100%;
+  }
 
   .AboutSection > div {
     display: flex;
@@ -821,6 +852,11 @@ textarea:hover {
 
   /* skill section */
 
+  .skillSection {
+    margin: 0px;
+    width: 100%;
+  }
+
   .MainSkillContainer {
     flex-direction: column;
     justify-content: center;
@@ -834,34 +870,36 @@ textarea:hover {
   }
 
   .Skilldiv {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   /* project */
+
+  .projectSection {
+    margin: 0px;
+    width: 100%;
+  }
+
   .projectFirst {
     flex-direction: column;
   }
 
   .rightHead {
-    /* margin-left: 10px; */
     margin-right: 20px;
-    text-align: center;
-    flex-direction: column;
   }
 
   .rightHead > .Btns {
     margin-left: 25px;
   }
 
-  .projleft {
-    margin-right: 10px;
+  .Btns > button {
+    background: none;
+    border-radius: 50%;
   }
 
-  .proimg {
-    height: 200px;
-    width: 200px;
-    margin-left: 5px;
-    margin-bottom: 0px;
+  .projleft {
+    display: none;
   }
 
   .projright {
@@ -879,7 +917,7 @@ textarea:hover {
   }
 
   .technology > ul {
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: auto;
@@ -887,6 +925,12 @@ textarea:hover {
   }
 
   /* Contact Form */
+
+  .contactME {
+    margin: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
   .FormContainer {
     flex-direction: column;
